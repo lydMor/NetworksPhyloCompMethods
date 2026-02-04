@@ -3,7 +3,7 @@ Here, you'll be able to find all code and data asosciated with the publication: 
 # What we did: 
 We started by simulating a bunch of phylogenetic networks with different parameters with the R package SiPhyNetwork. For a detailed walkthrough of how to use and customize this program, see: https://github.com/jjustison/SiPhyNetwork, then we used those networks to simulate continuoulsy evolving traits under brownian motion in Julia package PhyloNetwworks. We extracted the major tree for each of our networks, and used the traits at the tip states to estimate ancestral characters using traditional tree-based PCMs. We used these data to understand how various features of trait evolutionary history and phylogenetic network structure impact PCM accuracy, and what we should do about it. 
 
-If you want to follow along at every step, start by putting the two files "Net-trait-sims_ex1.csv" and "Net-trait-sims_ex2.csv". You'll need to be in those directories to follow scripts 4 and 6. 
+If you want to follow along at every step, start by putting the two files "Net-trait-sims_ex1.csv" and "Net-trait-sims_ex2.csv" into a named directory. You'll need to be in those directories to follow scripts 4 and 6. 
 
 # Simulating phylogenetic networks: 
 1-SimNetsGetDat.R;
@@ -11,11 +11,14 @@ this script details how to simulate many networks at a time, collect important d
 
 # Simulating continuously evolving traits on networks: 
 2-SimTraits_Net.jl;
-tThis script details how to simulate continuous traits evolving on a phylogenetic network, extract relevant parameters and data for each simulation, and extract and output the major tree for each nework.
+This script details how to simulate continuous traits evolving on a phylogenetic network, extract relevant parameters and data for each simulation, and extract and output the major tree for each nework.
 
 # Simulating continuously evolving traits on trees, and estimating ancestral character states: 
 3-SimTraits_Tree.R;
-THis script details how to simulate continuoulsy evolving traits from a set of given topologies with a given set of parameters; and subsequently extract, and collate relevant information. Then, it uses that information to perform ancestral character estimations, comparing those to known parameters, and outputs a single file detailing true states, estimated states, error, (etc.) for each topology-trait combination. 
+This script details how to simulate continuoulsy evolving traits from a set of given topologies with a given set of parameters; and subsequently extract, and collate relevant information. Then, it uses that information to perform ancestral character estimations, comparing those to known parameters, and outputs a single file detailing true states, estimated states, error, (etc.) for each topology-trait combination. 
+
+3b-SimTraitsOnTrees.jl; 
+This does the same as above, but in phylonetworks on Julia instead of R.
 
 *Note: This requires, as input, a dataframe in the form of: "TreeTopologies_ForSim.csv", in which one column contains the topology information, in newick text format, for all sampled topologies. 
 
@@ -42,6 +45,9 @@ This script details how to take the output from 3 and 5, and use it to analyze e
 # Important data: 
 8-AllTopologies.csv;
 A file containing all network topologies and corresponding major tree topologies used throughout this project. 
+
+Net-trait-sims_ex1.csv and Net-trait-sims_ex2.csv; 
+These are sample datasets that you can download to follow along with each script. For the full datasets, see our Dryad page: (Link provided upon manuscript publication)
 
 
 
