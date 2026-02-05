@@ -3,7 +3,7 @@ Here, you'll be able to find all code and data asosciated with the publication: 
 # What we did: 
 We started by simulating a bunch of phylogenetic networks with different parameters with the R package SiPhyNetwork. For a detailed walkthrough of how to use and customize this program, see: https://github.com/jjustison/SiPhyNetwork, then we used those networks to simulate continuoulsy evolving traits under brownian motion in Julia package PhyloNetwworks. We extracted the major tree for each of our networks, and used the traits at the tip states to estimate ancestral characters using traditional tree-based PCMs. We used these data to understand how various features of trait evolutionary history and phylogenetic network structure impact PCM accuracy, and what we should do about it. 
 
-If you want to follow along at every step, start by putting the two files "Net-trait-sims_ex1.csv" and "Net-trait-sims_ex2.csv" into a named directory. You'll need to be in those directories to follow scripts 4 and 6. 
+If you want to follow along at every step, start by putting the two files "Net-trait-sims_ex1.txt.csv" and "Net-trait-sims_ex2.txt.csv" into a named directory. You'll need to be in those directories to follow scripts 4 and 6. 
 
 # Simulating phylogenetic networks: 
 1-SimNetsGetDat.R;
@@ -46,7 +46,7 @@ This script details how to take the output from 3 and 5, and use it to analyze e
 8-AllTopologies.csv;
 A file containing all network topologies and corresponding major tree topologies used throughout this project. 
 
-Net-trait-sims_ex1.csv and Net-trait-sims_ex2.csv; 
+Net-trait-sims_ex1.txt.csv, Net-trait-sims_ex2.txtcsv, and TreeTopologies_ForSim.csv; 
 These are sample datasets that you can download to follow along with each script. For the full datasets, see our Dryad page: (Link provided upon manuscript publication)
 
 
