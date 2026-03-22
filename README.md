@@ -46,6 +46,8 @@ This script details how to take the output from 3 and 5, and use it to analyze e
 8-AllTopologies.csv;
 A file containing all network topologies and corresponding major tree topologies used throughout this project. 
 
+9-MakeFigures.R; This script details how to generate informative figures detailing the results from these analyses.
+
 Net-trait-sims_ex1.txt.csv, Net-trait-sims_ex2.txtcsv, and TreeTopologies_ForSim.csv; 
 These are sample datasets that you can download to follow along with each script. For the full datasets, see our Dryad page: (Link provided upon manuscript publication)
 
